@@ -1,0 +1,18 @@
+
+row1 = ["⬜️","️⬜️","️⬜️"]
+row2 = ["⬜️","⬜️","️⬜️"]
+row3 = ["⬜️️","⬜️️","⬜️️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+
+user_input = [position]
+separated_number_1 = user_input[0][0]
+separated_number_2 = user_input[0][1]
+
+x = int(separated_number_2)-1
+y = int(separated_number_1)-1
+map[x].pop(y)
+map[x].insert(y , "X")
+
+print(f"{row1}\n{row2}\n{row3}")
